@@ -2,10 +2,7 @@ from ayx import Alteryx
 import pandas as pd
 import sys
 
-# -----------------------------------------------------------------------------
-# -----------------------------------------------------------------------------
 # 1. Dependencies (Universal Version)
-# -----------------------------------------------------------------------------
 # This script checks for the 'azure-data-tables' library.
 # If missing, it attempts to install it automatically via pip.
 # COMPATIBILITY: Works on both Local Designer (No Admin required) and Alteryx Server.
@@ -29,7 +26,7 @@ except ImportError:
         except Exception as e2:
             raise ImportError(f"Failed to install 'azure-data-tables': {e2}")
 
-    # Critical: Refresh site packages to recognize the new installation without restarting
+    # Refresh site packages to recognize the new installation without restarting
     importlib.reload(site)
     
     # Explicitly add user site packages to path if missing (fixes common Alteryx embedded Python issue)
@@ -46,17 +43,13 @@ except ImportError:
         print(f"Import failed even after installation: {e}")
         raise ImportError("Library installed but import failed. Please try running the workflow one more time to load the new package.")
 
-# -----------------------------------------------------------------------------
 # 2. Read Credentials from Input #1
-# -----------------------------------------------------------------------------
 df_input = Alteryx.read("#1")
 
 if df_input.empty:
     raise ValueError("Input #1 is empty. Please provide StorageAccount, AccountKey, and TableName columns.")
 
-# -----------------------------------------------------------------------------
 # 3. Process each row and output to separate anchors
-# -----------------------------------------------------------------------------
 max_anchors = 5
 rows_to_process = min(len(df_input), max_anchors)
 
