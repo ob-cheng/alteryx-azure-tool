@@ -48,9 +48,3 @@ Connect a **Text Input** tool to the Python tool (Anchor #1). Each row in your i
 1. Paste the code from the chosen `.py` file into the Alteryx Python tool.
 2. Ensure your Text Input is connected to anchor **#1**.
 3. Run the workflow.
-
----
-
-<div align="center">
-Feel free to fork this project or leave a star if it helped your workflow.
-</div>
