@@ -1,0 +1,6 @@
+StorageAccount,AccountKey,TableName,EndpointSuffix
+YOUR_ACCOUNT_NAME,YOUR_ACCOUNT_KEY,MCGAlternativeClaimsValidatorHistoryTable,core.windows.net
+YOUR_ACCOUNT_NAME,YOUR_ACCOUNT_KEY,MCGClaimsChatHistoryTable,core.windows.net
+YOUR_ACCOUNT_NAME,YOUR_ACCOUNT_KEY,MCGClaimsTranslatorHistoryTable,core.windows.net
+YOUR_ACCOUNT_NAME,YOUR_ACCOUNT_KEY,MCGCombineClaimsGeneratorHistoryTable,core.windows.net
+YOUR_ACCOUNT_NAME,YOUR_ACCOUNT_KEY,MCGFeedbackAssistantHistoryTable,core.windows.net
